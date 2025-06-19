@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Swiper Slider JS</title>
+</head>
+<body>
+    <div class="swiper-container swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">slide 1</div>
+            <div class="swiper-slide slide2">slide 2</div>
+            <div class="swiper-slide slide3">slide 3</div>
+            <div class="swiper-slide slide4">slide 4</div>
+            <div class="swiper-slide slide5">slide 5</div>
+            <div class="swiper-slide slide6">slide 6</div>
+            <div class="swiper-slide slide7">slide 7</div>
+            <div class="swiper-slide slide8">slide 8</div>
+            <div class="swiper-slide slide9">slide 9</div>
+            <div class="swiper-slide slide10">slide 10</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', function(){
+        var swiper = new Swiper(".swiper-container",{
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination:{
+                el: ".swiper-pagination",
+            },
+            navigation:{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints:{
+                768:{
+                    slidesPerView: 2,
+                },
+                992:{
+                    slidesPerView: 3,
+                },
+                1025:{
+                    slidesPerView: 4,
+                    spaceBetween:10,
+                }
+            },
+            autoplay:{
+                delay: 900,
+                disableOnInteraction: true,
+                // stopOnLastSlide: true,
+                pauseOnMouseEnter: true,
+            },
+        })
+       })
+    </script>
+</body>
+</html>
